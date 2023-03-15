@@ -25,7 +25,7 @@ class PostOwner
             ], 404);
         }
 
-        return response()->json($currentUser);
+        // return response()->json($currentUser);
         return $next($request);
     }
 }
