@@ -9,6 +9,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 
+
 class PostController extends Controller
 {
     public function index(){
@@ -57,7 +58,6 @@ class PostController extends Controller
         $request -> validate([
             'title' => 'required|max:255',
             'news_content' => 'required',
-            'image' => '',
         ]);
 
         $image = null;
@@ -89,7 +89,7 @@ class PostController extends Controller
         ]);
     }
 
-    function generateRandomString($length = 10) {
+    function generateRandomString($length =30) {
         $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
         $charactersLength = strlen($characters);
         $randomString = '';
